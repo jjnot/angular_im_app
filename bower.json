@@ -1,0 +1,9 @@
+{
+  "name": "CRchat",
+  "private": true,
+  "dependencies": {
+    "angular-scroll-glue": "~2.0.5",
+    "angular-material": "~0.8.3",
+    "mockjs": "~0.1.9"
+  }
+}

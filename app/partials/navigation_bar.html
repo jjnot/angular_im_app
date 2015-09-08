@@ -1,0 +1,26 @@
+<div class="navigation_bar">
+	<div class="nav_serch" layout="row" layout-align="start center">
+		<input placeholder="serch" ng-model="FriendFilter" />
+		<md-button class="add_btn md-primary" ng-click="showAddfriend()">add friend</md-button>
+	</div>
+    <div class="nav_list">
+        <ul>
+            <li ng-repeat="friend in friendList|filter:FriendFilter" ui-sref="home.chat({username:friend.username})" ng-class="{'selected': friend.isSelected}"
+            ng-click="selectFriendItem(friend)"
+            >
+                <md-button class="list_item_btn ">
+                    <div class="msg_item" layout="row" layout-align="start center">
+                        <img class="msg_avatar" ng-src="{{friend.head}}">
+                        <div class="msg_text" flex layout="column" layout-align="center start">
+                            <h3 class="ng-binding">{{friend.nick}}</h3>
+                            <span></span>
+                        </div>
+                        <div class="msg_num" layout="column" layout-align="center start">
+                            <div class="alert_num" ng-show="friend.alert_num">{{friend.alert_num}}</div>
+                        </div>
+                    </div>
+                </md-button>
+            </li>
+        </ul>
+    </div>
+</div>

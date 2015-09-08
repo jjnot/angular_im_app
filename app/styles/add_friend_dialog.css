@@ -1,0 +1,45 @@
+.add_friend_dialog {
+  width: 600px; }
+  .add_friend_dialog .add_friend_dialog_content {
+    display: flex;
+    flex-flow: column; }
+    .add_friend_dialog .add_friend_dialog_content .subheaer {
+      padding-left: 20px; }
+    .add_friend_dialog .add_friend_dialog_content .searchForm {
+      padding: 0 20px; }
+      .add_friend_dialog .add_friend_dialog_content .searchForm .error_msg {
+        color: #f44336; }
+    .add_friend_dialog .add_friend_dialog_content .searchResult {
+      flex: 1;
+      display: flex;
+      flex-flow: column; }
+      .add_friend_dialog .add_friend_dialog_content .searchResult .searchContent {
+        flex: 1;
+        overflow: auto; }
+      .add_friend_dialog .add_friend_dialog_content .searchResult .errReuslt {
+        padding: 10px 0 10px 20px; }
+      .add_friend_dialog .add_friend_dialog_content .searchResult .search_item {
+        padding: 10px 20px; }
+        .add_friend_dialog .add_friend_dialog_content .searchResult .search_item .search_avatar {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+          margin-left: 5px;
+          border-radius: 50%;
+          box-sizing: content-box;
+          vertical-align: middle; }
+        .add_friend_dialog .add_friend_dialog_content .searchResult .search_item .search_text {
+          text-align: left; }
+          .add_friend_dialog .add_friend_dialog_content .searchResult .search_item .search_text h3 {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            margin: 2px 0 2px 0; }
+          .add_friend_dialog .add_friend_dialog_content .searchResult .search_item .search_text span {
+            font-size: 12px;
+            font-weight: 200;
+            color: rgba(0, 0, 0, 0.54); }
+        .add_friend_dialog .add_friend_dialog_content .searchResult .search_item .add_btn {
+          font-size: 14px;
+          line-height: 18px;
+          padding: 6px 25px; }

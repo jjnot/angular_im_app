@@ -1,0 +1,26 @@
+<div class="chat_window">
+    <div class="chat_tool_bar" layout="row" layout-align="start center">
+        <img class="chat_avatar" ng-src="{{chatTarget.head}}">
+        <span class="chat_nick" flex>{{chatTarget.nick}}</span>
+        <md-button aria-label="audiochat" class="chat_tool md-primary" ng-click="startAudioChat()">
+            <md-icon md-font-icon="icon-phone"></md-icon>
+        </md-button>
+        <md-button aria-label="videochat" class="chat_tool md-primary" ng-click="startVideoChat()">
+            <md-icon md-font-icon="icon-camera"></md-icon>
+        </md-button>
+        <md-button aria-label="setting" class="chat_tool md-primary">
+            <md-icon md-font-icon="icon-cog"></md-icon>
+        </md-button>
+    </div>
+    <div class="chat_content" scroll-glue>
+        <ul>
+            <li ng-repeat="msg in msgList" class="msg" ng-class="{'self': 'msg_self', 'other': 'msg_other'}[msg.msgFrom]">
+                <span>{{msg.text}}</span>
+            </li>
+        </ul>
+    </div>
+    <form class="chat_input" layout="row" layout-align="start center">
+        <input type="text" placeholder="输入文字 ..." flex ng-model="chat_text">
+        <md-button type="submit" class="send_btn" ng-click="sendMsg()">send</md-button>
+    </form>
+</div>

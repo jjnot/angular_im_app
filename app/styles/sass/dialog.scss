@@ -1,0 +1,59 @@
+.mid_dialog {
+    width: 600px;
+    .mid_container {
+        padding: 0 16px;
+        margin-bottom: 16px;
+        overflow: auto;
+    }
+}
+
+.friend_msg_list {
+    li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .list_content {
+        margin-left: 20px;
+    }
+}
+
+.head_mod_dia {
+    .success_show {
+        color: rgb(0, 188, 212);
+        text-align: center;
+        line-height: 24px;
+    }
+    .err_show {
+        color: rgb(244, 67, 54);
+        text-align: center;
+        line-height: 24px;
+    }
+}
+
+.nick_mod_dia{
+	.nick_ok{
+        width: 80px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        float: right;
+    }
+    .result_msg{
+        color: rgb(0, 188, 212);
+    }
+}
+.pass_mod_dia{
+    .nick_ok{
+        width: 80px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        float: right;
+    }
+    .result_msg{
+        color: rgb(0, 188, 212);
+    }
+}

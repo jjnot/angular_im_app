@@ -1,0 +1,20 @@
+<md-dialog aria-label="好友请求" class="mid_dialog">
+    <md-subheader>好友请求</md-subheader>
+    <md-dialog-content class=" mid_container">
+        <div>
+            <ul class="friend_msg_list">
+                <li layout="row" layout-align="start center" ng-repeat="msg in msgs">
+                    <img ng-src="{{msg.head}}" alt="">
+                    <span flex class="list_content">{{msg.msgContent}}</span>
+                    <div ng-show="msg.msgState =='read'">
+                        <md-button class="md-primary" ng-click="acceptfriend(msg)">同意</md-button>
+                        <md-button ng-click="refucefriend(msg)">拒绝</md-button>
+                        
+                    </div>
+                    <md-button ng-disabled="true" ng-show="msg.msgState =='handled'">回应已发送</md-button>
+                </li>
+                
+            </ul>
+        </div>
+    </md-dialog-content>
+</md-dialog>

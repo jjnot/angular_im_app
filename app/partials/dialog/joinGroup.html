@@ -1,0 +1,12 @@
+<md-dialog aria-label="加入群聊" class="mid_dialog nick_mod_dia">
+    <md-subheader>加入群聊</md-subheader>
+    <md-dialog-content class=" mid_container">
+        <form name="userForm">
+            <md-input-container>
+                <label>群聊id</label>
+                <input ng-model="groupID" type="text" name="nick">
+            </md-input-container>
+            <md-button class="md-raised md-primary nick_ok" ng-click="join()" >确认</md-button>
+        </form>
+    </md-dialog-content>
+</md-dialog>

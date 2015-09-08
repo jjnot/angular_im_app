@@ -1,0 +1,57 @@
+<div class="video_window" ng-hide="hide">
+    <div class="video_border" flexibleborder></div>
+    <div ng-if="status.isCalling" layout="column" layout-align="start center">
+        <img class="caller_avatar" ng-src="{{callee.head}}">
+        <span class="caller_nick">{{callee.inform}}</span>
+        <div class="answer_btn_content" layout="row" layout-align="center center">
+            <md-button aria-label="no" class="md-fab md-accent answer_btn" ng-click="cancleCall()">
+                <md-tooltip>
+                    取消呼叫
+                </md-tooltip>
+                <md-icon md-font-icon="icon-cross"></md-icon>
+            </md-button>
+        </div>
+    </div>
+    <div ng-if="status.isAnswering" layout="column" layout-align="start center">
+        <img class="caller_avatar" ng-src="{{caller.head}}">
+        <span class="caller_nick">{{caller.nick}}</span>
+        <div class="answer_btn_content" layout="row" layout-align="center center">
+            <md-button aria-label="ok" class="md-fab md-primary answer_btn" ng-click="accept()">
+                <md-tooltip>
+                    接受通话
+                </md-tooltip>
+                <md-icon md-font-icon="icon-checkmark"></md-icon>
+            </md-button>
+            <md-button aria-label="no" class="md-fab md-accent answer_btn" ng-click="refuse()">
+                <md-tooltip>
+                    拒绝通话
+                </md-tooltip>
+                <md-icon md-font-icon="icon-cross"></md-icon>
+            </md-button>
+        </div>
+    </div>
+    <div ng-if="status.isVideoChating">
+        <video id="remotevideo" autoplay  ng-src="{{remoteVideoSrc}}"></video>
+        <video id="localvideo" autoplay  ng-src="{{localVideoSrc}}"></video>
+        <div class="answer_btn_content" layout="row" layout-align="center center">
+            <md-button aria-label="no" class="md-fab md-accent answer_btn" ng-click="hangUpVideo()">
+                <md-tooltip>
+                    挂断
+                </md-tooltip>
+                <md-icon md-font-icon="icon-cross"></md-icon>
+            </md-button>
+        </div>
+    </div>
+    <div ng-if="status.isAudioChating">
+        <audio id="remoteAudio" autoplay height="0" width="0" ng-src="{{remoteAudioSrc}}"></audio>
+        <audio id="localAudio" autoplay height="0" width="0" ng-src="{{localAudioSrc}}"></audio>
+        <div class="answer_btn_content" layout="row" layout-align="center center">
+            <md-button aria-label="no" class="md-fab md-accent answer_btn" ng-click="hangUpAudio()">
+                <md-tooltip>
+                    挂断
+                </md-tooltip>
+                <md-icon md-font-icon="icon-cross"></md-icon>
+            </md-button>
+        </div>
+    </div>
+</div>

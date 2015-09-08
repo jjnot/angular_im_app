@@ -1,0 +1,17 @@
+<md-dialog aria-label="修改头像" class="mid_dialog head_mod_dia">
+    <md-subheader>修改头像</md-subheader>
+    <md-dialog-content class=" mid_container">
+        <div>
+           <dropbox dropfail="uploadErr()" dropsucc="uploadSucc(url)" ng-if="status==1"></dropbox>
+           <avatar ng-if="status==2" avatarsrc ="avatarsrc" succfunc="cutsucc(url)" errfunc="cuterr()"></avatar>
+           <div class="success_show"  ng-if="status==3">
+	           <md-icon md-font-icon="icon-checkmark"></md-icon>	
+	           <span>头像上传成功</span>
+           </div>
+           <div class="err_show"  ng-if="status==4">
+	           	<md-icon md-font-icon="icon-cross"></md-icon>
+	           	<span>发生网络错误，头像上传失败！</span>
+           </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>

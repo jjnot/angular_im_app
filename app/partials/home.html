@@ -1,0 +1,66 @@
+<div class="home_view">
+    <md-toolbar>
+        <div class="md-toolbar-tools home_toolbar">
+            <h1>GRchat</h1>
+            <!-- fill up the space between left and right area -->
+            <span flex></span>
+            <md-button class="md-primary" ng-click="createGroup()">创建群聊</md-button>
+            <md-button class="md-primary" ng-click="joinGroup()">加入群聊</md-button>
+            <md-button ng-click="toggleRight()" class="md-icon-button md-primary" aria-label="Settings">
+                <img class="account_btn" ng-src="{{account.head}}">
+                <span class="friend_add_msg" ng-show="friend_rqs_num">{{friend_rqs_num}}</span>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <div class="wrapper">
+        <div class="nav_bar_view md-whiteframe-z1">
+            <ui-view name="navigation_bar" id="navigation_bar"></ui-view>
+        </div>
+        <div class="windows_view ">
+            <ui-view name="chat_window" layout="column" id="chat_window"></ui-view>
+        </div>
+        <div class="video_view">
+            <ui-view name="video_view" id="video_view"></ui-view>
+        </div>
+    </div>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">{{account.nick}}</h1>
+        </md-toolbar>
+        <md-content ng-controller="setting_ctrl">
+            <ul>
+                <li class="setting_list" layout="row" layout-align="center start">
+                    <img class="setting_head" ng-src="{{account.head}}">
+                </li>
+                <md-subheader class="md-primary">好友</md-subheader>
+                <li class="setting_list">
+                    <md-button class="setting_btn" layout="row" layout-align="center center" ng-click="showFriendMsgDia()">
+                        <span>好友请求</span>
+                        <div class="friend_request_num" ng-show="friend_rqs_num">{{friend_rqs_num}}</div>
+                        </md-buttom>
+                </li>
+                <md-subheader class="md-primary">个人设置</md-subheader>
+                <li class="setting_list">
+                    <md-button class="setting_btn" ng-click="modifyHead()">
+                        <span>修改头像</span>
+                        </md-buttom>
+                </li>
+                <li class="setting_list">
+                    <md-button class="setting_btn" ng-click="modifyNick()">
+                        <span>修改昵称</span>
+                        </md-buttom>
+                </li>
+                <li class="setting_list">
+                    <md-button class="setting_btn" ng-click="modifyPass()">
+                        <span>修改密码</span>
+                        </md-buttom>
+                </li>
+                <li class="setting_list">
+                    <md-button class="setting_btn md-warn" ng-click="logout()">
+                        <span>登出</span>
+                        </md-buttom>
+                </li>
+            </ul>
+        </md-content>
+    </md-sidenav>
+</div>

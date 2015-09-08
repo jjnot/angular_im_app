@@ -1,0 +1,41 @@
+.dropbox .form_area {
+  display: none; }
+.dropbox .drop_area {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #bbbbbb;
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 300px;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center; }
+.dropbox .err_msg {
+  color: #f44336;
+  text-align: center; }
+.dropbox .drop_area.dragenter {
+  border: 2px solid #00bcd4; }
+
+.avatarCanvas .dia_container .dia_btn {
+  width: 80px;
+  margin-left: 10px; }
+.avatarCanvas #canvas_wrapper {
+  margin: auto;
+  position: relative; }
+.avatarCanvas #outer_selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 4px lightblue solid;
+  cursor: move; }
+.avatarCanvas #inner_selector {
+  cursor: move;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+.avatarCanvas #avatarModifyer {
+  display: block;
+  margin: auto;
+  max-height: 400px;
+  max-width: 400px; }

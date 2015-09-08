@@ -1,0 +1,15 @@
+<md-dialog aria-label="修改昵称" class="mid_dialog nick_mod_dia">
+    <md-subheader>修改昵称</md-subheader>
+    <md-dialog-content class=" mid_container">
+        <form name="userForm">
+            <md-input-container>
+                <label>昵称</label>
+                <input ng-model="nick" type="text" name="nick">
+                <div ng-messages="userForm.nick.$error">
+                    <div ng-message="required" class="result_msg">{{result}}</div>
+                </div>
+            </md-input-container>
+            <md-button class="md-raised md-primary nick_ok" ng-click="submit()" ng-disabled="{{submitting}}">确认</md-button>
+        </form>
+    </md-dialog-content>
+</md-dialog>

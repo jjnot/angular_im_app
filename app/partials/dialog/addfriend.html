@@ -1,0 +1,60 @@
+<md-dialog class="add_friend_dialog">
+    <md-dialog-content   class="add_friend_dialog_content">
+        <md-subheader class="subheaer">ADD FRIEND</md-subheader>
+        <div ng-if="status.isInit">
+            <div class="searchForm">
+                <form name="searchForm">
+                    <div layout="column">
+                        <md-input-container>
+                            <label>用户名(二填一）</label>
+                            <input ng-model="info.username">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>昵称(二填一）</label>
+                            <input name="nick" ng-model="info.nick">
+                            <div ng-messages="searchForm.nick.$error">
+                                <div ng-message="required" class="error_msg">{{searchErr}}</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                </form>
+            </div>
+            <div class="md-actions" layout="row">
+                <md-button class="md-primary" ng-click="search()">
+                    Search
+                </md-button>
+            </div>
+        </div>
+        <div ng-if="status.isSearching">
+            <div class="searching">
+                <div layout="row" layout-sm="column" layout-align="space-around">
+                    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+                </div>
+            </div>
+            <div class="md-actions" layout="row">
+                <md-button class="md-primary" ng-click="hide()">
+                    cancle
+                </md-button>
+            </div>
+        </div>
+        <div ng-if="status.isShowResult" class="searchResult">
+            <div class="searchContent">
+            	<div class="errReuslt" ng-show="isResultErr">无搜索结果</div>
+                <ul>
+                	<li layout="row" class="search_item" ng-repeat="friend in searchResult">
+                		<img class="search_avatar" ng-src="{{friend.head}}" /s>
+						<div class="search_text" flex layout="column" layout-align="center start">
+                            <h3 class="ng-binding">{{friend.nick}}</h3>
+                        </div>
+                        <md-button class="add_btn" ng-disabled="friend.added" ng-click="addfriend(friend)">{{friend.handle}}</md-button>
+                	</li>
+                </ul>
+            </div>
+            <div class="md-actions" layout="row">
+                <md-button class="md-primary" ng-click="hide()">
+                    cancle
+                </md-button>
+            </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>

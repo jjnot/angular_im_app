@@ -1,0 +1,63 @@
+.home_view {
+  height: 100%;
+  display: flex;
+  flex-flow: column; }
+  .home_view .home_toolbar {
+    background: white;
+    color: #00bcd4; }
+  .home_view h1 {
+    font-size: 16px; }
+  .home_view .account_btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; }
+  .home_view .friend_add_msg {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: white;
+    background: #f44336;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 19px;
+    line-height: 19px; }
+  .home_view .wrapper {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-flow: row; }
+    .home_view .wrapper .nav_bar_view {
+      width: 300px;
+      display: flex;
+      flex-flow: column; }
+      .home_view .wrapper .nav_bar_view #navigation_bar {
+        flex: 1;
+        display: flex;
+        flex-flow: column; }
+    .home_view .wrapper .windows_view {
+      flex: 1;
+      display: flex;
+      flex-flow: column; }
+      .home_view .wrapper .windows_view #chat_window {
+        flex: 1;
+        display: flex;
+        flex-flow: column; }
+  .home_view .setting_list {
+    width: 100%; }
+    .home_view .setting_list .setting_head {
+      width: 100px;
+      border-radius: 50%;
+      margin: 25px auto 10px auto; }
+    .home_view .setting_list .setting_btn {
+      width: 100%;
+      border-radius: 0; }
+      .home_view .setting_list .setting_btn span {
+        line-height: 40px; }
+    .home_view .setting_list .friend_request_num {
+      background: #f44336;
+      color: white;
+      width: 19px;
+      line-height: 19px;
+      font-size: 12px;
+      margin-left: 10px;
+      border-radius: 50%; }

@@ -1,0 +1,36 @@
+<div layout="column" layout-fill class="login_view register_view">
+    <form name="userForm">
+        <div layout="column">
+            <md-input-container>
+                <label>用户名</label>
+                <input ng-model="userInfo.username">
+                <div ng-messages="userForm.username.$error">
+                    <div ng-message="required" class="error_msg">{{errors.usernameErr}}</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>昵称</label>
+                <input ng-model="userInfo.nick">
+                <div ng-messages="userForm.nick.$error">
+                    <div ng-message="required" class="error_msg">{{errors.nickErr}}</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>密码</label>
+                <input ng-model="userInfo.password" type="password">
+                <div ng-messages="userForm.password.$error">
+                    <div ng-message="required" class="error_msg">{{errors.passwordErr}}</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>密码重复</label>
+                <input ng-model="userInfo.passRepeat" type="password">
+                <div ng-messages="userForm.passRepeat.$error">
+                    <div ng-message="required" class="error_msg">{{errors.repeatErr}}</div>
+                </div>
+            </md-input-container>
+             <md-button class="md-primary" ng-click="submit()">注&nbsp&nbsp册</md-button>
+             <md-button ui-sref="welcome.login">已有账号？前往登录</md-button>
+        </div>
+    </form>
+</div>

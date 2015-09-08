@@ -1,0 +1,22 @@
+<div layout="column" layout-fill class="login_view">
+    <form name="userForm">
+        <div layout="column">
+            <md-input-container>
+                <label>用户名</label>
+                <input  name="username" ng-model="userInfo.username">
+                <div ng-messages="userForm.username.$error">
+                    <div ng-message="required" class="error_msg">{{errors.usernameErr}}</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>密码</label>
+                <input ng-model="userInfo.password" type="password">
+                <div ng-messages="userForm.password.$error">
+                    <div ng-message="required" class="error_msg">{{errors.passwordErr}}</div>
+                </div>
+            </md-input-container>
+            <md-button class="md-primary" ng-click="submit()">登&nbsp&nbsp录</md-button>
+            <md-button ui-sref="welcome.register">没有账号？前往注册</md-button>
+        </div>
+    </form>
+</div>

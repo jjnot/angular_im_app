@@ -1,0 +1,10 @@
+<div class="dropbox">
+	<div class="drop_area" ng-hide="isUploading||isErr">
+		请将头像拉入框中
+	</div>
+	<div ng-show="isUploading" class="uploading" layout="column" layout-align="start center">
+			<md-progress-circular  class="md-hue-2 laodingcircular" md-mode="indeterminate"></md-progress-circular >
+			<p>正在上传图片,请稍后</p>
+	</div>
+	<div class="err_msg">{{errMsg}}</div>
+</div>

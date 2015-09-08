@@ -1,0 +1,22 @@
+<md-dialog aria-label="修改密码" class="mid_dialog pass_mod_dia">
+    <md-subheader>修改密码</md-subheader>
+    <md-dialog-content class=" mid_container">
+        <form name="userForm" >
+            <md-input-container>
+                <label>原密码</label>
+                <input ng-model="oldpass" name="oldpass" type="password">
+                <div ng-messages="userForm.oldpass.$error">
+                    <div ng-message="required" class="result_msg">{{oldErr}}</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>新密码</label>
+                <input ng-model="newpass" name="newpass" type="password">
+                <div ng-messages="userForm.newpass.$error">
+                    <div ng-message="required" class="result_msg">{{result}}</div>
+                </div>
+            </md-input-container>
+            <md-button class="md-raised md-primary nick_ok" ng-click="submit()" ng-disabled="{{submitting}}">确认</md-button>
+        </form>
+    </md-dialog-content>
+</md-dialog>

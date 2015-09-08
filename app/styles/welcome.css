@@ -1,0 +1,38 @@
+.welcome_view {
+  background: url(../images/wel_bg.jpg);
+  background-size: cover;
+  height: 100%; }
+  .welcome_view .center_container {
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    width: 500px;
+    height: 400px; }
+  .welcome_view .form_view {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    top: 0;
+    left: 0; }
+    .welcome_view .form_view .error_msg {
+      color: #f44336; }
+  .welcome_view .welcome_button {
+    margin: auto;
+    width: 300px;
+    top: 200px;
+    position: relative;
+    text-align: center; }
+    .welcome_view .welcome_button .md-button {
+      padding: 10px 30px;
+      margin: 0 20px; }
+  .welcome_view .form_view.ng-enter {
+    animation: 1s form_view_in forwards; }
+  .welcome_view .form_view.ng-leave {
+    animation: 0.6s form_view_out forwards; }
+  .welcome_view .login_view {
+    top: 80px;
+    width: 400px;
+    position: relative;
+    margin: auto; }
+  .welcome_view .register_view {
+    top: 50px; }

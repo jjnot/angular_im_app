@@ -1,0 +1,56 @@
+.navigation_bar {
+  flex: 1;
+  display: flex;
+  flex-flow: column; }
+  .navigation_bar .nav_serch {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #f6f6f6; }
+    .navigation_bar .nav_serch input {
+      border-radius: 4px;
+      border: none;
+      background: #f6f6f6;
+      margin-left: 15px;
+      padding-left: 10px;
+      line-height: 25px; }
+    .navigation_bar .nav_serch .add_btn {
+      font-size: 12px;
+      margin-left: 15px; }
+  .navigation_bar .nav_list {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .navigation_bar .nav_list .selected {
+      background: rgba(158, 158, 158, 0.2); }
+    .navigation_bar .nav_list .list_item_btn {
+      width: 100%;
+      border-radius: 0;
+      height: 70px; }
+    .navigation_bar .nav_list .msg_item .msg_avatar {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      margin-left: 5px;
+      border-radius: 50%;
+      box-sizing: content-box;
+      vertical-align: middle; }
+    .navigation_bar .nav_list .msg_item .msg_text {
+      text-align: left; }
+      .navigation_bar .nav_list .msg_item .msg_text h3 {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        margin: 2px 0 2px 0; }
+      .navigation_bar .nav_list .msg_item .msg_text span {
+        font-size: 12px;
+        font-weight: 200;
+        color: rgba(0, 0, 0, 0.54); }
+    .navigation_bar .nav_list .msg_item .msg_num .alert_num {
+      display: block;
+      padding: 1px;
+      min-width: 22px;
+      line-height: 20px;
+      background: #ff4081;
+      color: white;
+      border-radius: 50%;
+      font-size: 10px; }

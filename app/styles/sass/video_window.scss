@@ -1,0 +1,49 @@
+.video_view {
+    display: flex;
+    flex-flow: column;
+    #video_view {
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+    }
+}
+
+.video_window {
+    position: relative;
+    .video_border{
+        width: 2px;
+        position: absolute;
+        background: #f6f6f6;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        cursor: col-resize;
+        z-index: 1;
+    }
+    width: 300px;
+    flex: 1;
+    .caller_avatar {
+        border-radius: 50%;
+        margin: 40px auto;
+        height: 100px;
+    }
+    .caller_nick {
+        margin: 0 auto 40px auto;
+    }
+    .answer_btn {
+        span {
+            font-size: 24px;
+        }
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    #remotevideo {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+    #localvideo{
+        width: 120px;
+        height: auto;
+    }
+}
