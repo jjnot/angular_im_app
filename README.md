@@ -14,3 +14,15 @@
 >项目使用了mock.js 但是由于用了websocket，并不能完成完整的mock
 
 >想拿到服务端代码做参考的可以email我：*358597534@qq.com*
+
+##如何运行？
+```
+npm install
+```
+```
+bower install
+```
+
+```
+grunt server
+```
